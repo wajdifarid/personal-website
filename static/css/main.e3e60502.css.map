@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.e3e60502.css","mappings":"AAAA,qBAME,WAAY,CADZ,WAAY,CAFZ,MAAO,CAFP,cAAe,CACf,KAAM,CAEN,UAGF","sources":["styles.css"],"sourcesContent":[".pdf-embed-container {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  border: none;\n}\n"],"names":[],"sourceRoot":""}
