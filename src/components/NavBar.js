@@ -1,21 +1,45 @@
+import { useState } from "react";
+
 export default function NavBar() {
   return (
-    <nav className="bg-white border border-slate-100 flex justify-between px-2">
+    <nav className="py-4 bg-white border border-slate-100 flex justify-between px-2">
       <div className="text-left text-sky-500 text-[20px] font-black leading-loose">FW</div>
-      <div className="hamburger-menu z-20">
-        <input className="opacity-0" id="menu__toggle" type="checkbox" />
-        <label className="fixed justify-end right-2 top-5 w-6 h-6 z-30 cursor-pointer menu__btn" htmlFor="menu__toggle">
-          <span className="before:-top-2 before:content-[''] after:content-[''] after:top-2 before:block after:block block before:absolute after:absolute absolute before:w-full after:w-full w-full"></span>
-        </label>
-
-        <ul className="menu__box">
-          <li><a className="menu__item hover:bg-sky-500 block py-3 px-6" href="#experiences">Experiences</a></li>
-          <li><a className="menu__item hover:bg-sky-500 block py-3 px-6" href="#skills">Skills</a></li>
-          <li><a className="menu__item hover:bg-sky-500 block py-3 px-6" href="#portfolio">Portfolio</a></li>
-          <li><a className="menu__item hover:bg-sky-500 block py-3 px-6" href="#blogs">Blog</a></li>
-          <li><a className="menu__item hover:bg-sky-500 block py-3 px-6" href="#contact">Contact Me</a></li>
-        </ul>
-      </div>
+      <HamburgerMenu />
     </nav>
   )
 }
+
+export function HamburgerMenu() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleMenu()  {
+    setIsOpen(!isOpen);
+  };
+
+  return <>
+    <div className="p-2" onClick={toggleMenu}>
+      <img src="/assets/hamburger-menu-icon.svg" alt="hamburger menu" />
+    </div>
+    {isOpen && (
+      <div>
+        <div className="w-2/6 h-screen bg-black bg-opacity-80 top-0 left-0 fixed z-20">
+
+        </div>
+        <div className="flex flex-col w-4/6 bg-white justify-start items-start fixed right-0 top-0 h-screen z-20">
+          <div className="w-full p-4 border border-zinc-200 justify-between items-center gap-2.5 inline-flex">
+            <div className="text-center text-sky-500 text-[20px] font-black leading-loose">FW</div>
+            <button className="h-6" onClick={toggleMenu}><img src="/assets/close-icon.svg" alt="close-icon" /></button>
+          </div>
+          <div className="flex flex-col justify-start items-start w-full">
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#experiences"><button className="h-6" onClick={toggleMenu}>Experiences</button></a>
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#skills"><button className="h-6" onClick={toggleMenu}>Skills</button></a>
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#portfolio"><button className="h-6" onClick={toggleMenu}>Portfolio</button></a>
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#blogs"><button className="h-6" onClick={toggleMenu}>Blogs</button></a>
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#contact"><button className="h-6" onClick={toggleMenu}>Contact Me</button></a>
+          </div>
+        </div>
+      </div>
+    )}
+  </>
+    ;
+};
