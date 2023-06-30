@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       <NavBar />
-      <section className="flex flex-col">
-        <img className="mx-auto" src="https://via.placeholder.com/148x200" alt="Farid"/>
+      <section className="flex flex-col my-4">
+        <img className="mx-auto min-h-[200px]" src="https://via.placeholder.com/148x200" alt="Farid"/>
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Hi, I’m Farid Wajdi</div>
         <div className="mx-auto text-zinc-700 text-[14px] font-normal leading-normal">Full-stack Software Engineer</div>
         <div className="mx-auto w-60 left-[40px] text-center text-slate-400 text-[14px] font-normal leading-normal">I like to solve problem and build product which leaves an impact on people lives. Based in Jakarta 🇮🇩</div>
