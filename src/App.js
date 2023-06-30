@@ -23,7 +23,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col">
+      <section id="experiences" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Experiences</div>
 
         <div className="mx-auto w-full h-full">
@@ -32,7 +32,7 @@ export default function HomePage() {
             {/* <!-- right timeline --> */}
             <div className="flex justify-between items-center w-full right-timeline">
               <div className="w-5/12"></div>
-              <div className="z-20 flex items-center bg-sky-500 w-3 h-3 rounded-full">
+              <div className="relative z-10 flex items-center bg-sky-500 w-3 h-3 rounded-full">
               </div>
               <div className="w-5/12">
                 <div className="flex flex-col justify-start items-start">
@@ -50,7 +50,7 @@ export default function HomePage() {
             {/* <!-- left timeline --> */}
             <div className="flex justify-between flex-row-reverse items-center w-full">
               <div className="w-5/12"></div>
-              <div className="z-20 flex items-center bg-sky-500 w-3 h-3 rounded-full">
+              <div className="relative z-10 flex items-center bg-sky-500 w-3 h-3 rounded-full">
               </div>
               <div className="w-5/12">
                 <div className="flex flex-col justify-end items-end">
@@ -68,7 +68,7 @@ export default function HomePage() {
             {/* <!-- right timeline --> */}
             <div className="flex justify-between items-center w-full right-timeline">
               <div className="w-5/12"></div>
-              <div className="z-20 flex items-center bg-sky-500 w-3 h-3 rounded-full">
+              <div className="relative z-10 flex items-center bg-sky-500 w-3 h-3 rounded-full">
               </div>
               <div className="w-5/12">
                 <div className="flex flex-col justify-start items-start">
@@ -86,7 +86,7 @@ export default function HomePage() {
             {/* <!-- left timeline --> */}
             <div className="flex justify-between flex-row-reverse items-center w-full">
               <div className="w-5/12"></div>
-              <div className="z-20 flex items-center bg-sky-500 w-3 h-3 rounded-full">
+              <div className="relative z-10 flex items-center bg-sky-500 w-3 h-3 rounded-full">
               </div>
               <div className="w-5/12">
                 <div className="flex flex-col justify-end items-end">
@@ -105,7 +105,7 @@ export default function HomePage() {
 
       </section>
 
-      <section className="flex flex-col">
+      <section id="skills" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Skills</div>
         <div className="mx-auto">
           <div className="my-2">
@@ -117,7 +117,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="flex flex-col">
+      <section id="portfolio" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Portfolio</div>
         <div className="left-[20px]  flex-col justify-start items-center gap-4 inline-flex">
           <PortfolioCard title="Shopee Barokah" details="Shopee Barokah provides halal-certified products. Help product sales to grow by 200%." />
@@ -127,7 +127,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="flex flex-col">
+      <section id="blogs" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Blog</div>
         <div className="left-[20px]  flex-col justify-start items-center gap-4 inline-flex">
           <BlogCard title="An algorithm for checking palindrome numbers" publishDate="29 June 2023" />
@@ -137,7 +137,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="flex flex-col">
+      <section id="contact" className="flex flex-col">
         <div className="mx-auto flex-col justify-start items-center gap-1 inline-flex my-2">
           <div className="text-zinc-700 text-[20px] font-semibold leading-loose">Contact Me</div>
           <div className="w-60 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
