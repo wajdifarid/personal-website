@@ -23,8 +23,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="left-[104px]  text-zinc-700 text-[20px] font-semibold leading-loose">Experiences</div>
+      <section className="flex flex-col">
+        <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Experiences</div>
         <div className="w-[265px] h-[392px] left-[28px] ">
           <div className="left-[154px] top-0  flex-col justify-start items-start gap-1 inline-flex">
             <img className="w-6 h-6 rounded-sm" src="https://via.placeholder.com/24x24" />
@@ -80,16 +80,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section>
-        <div className="left-[136px]  text-zinc-700 text-[20px] font-semibold leading-loose">Skills</div>
+      <section className="flex flex-col">
+        <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Skills</div>
         <div className="left-[43.50px]  flex-col justify-start items-start gap-4 inline-flex">
           <SkillCard title="Front-End Engineer" content="Javascript, React, CSS" />
           <SkillCard title="Back-End Engineer" content="Golang, Java, PHP" />
         </div>
       </section>
 
-      <section>
-        <div className="left-[119px]  text-zinc-700 text-[20px] font-semibold leading-loose">Portfolio</div>
+      <section className="flex flex-col">
+        <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Portfolio</div>
         <div className="left-[20px]  flex-col justify-start items-center gap-4 inline-flex">
           <PortfolioCard title="Shopee Barokah" details="Shopee Barokah provides halal-certified products. Help product sales to grow by 200%." />
           <PortfolioCard title="Cari Kerja" details="Lumina helps companies find the best talent. Help grow business partner by 200%." />
@@ -98,8 +98,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section>
-        <div className="left-[139px]  text-zinc-700 text-[20px] font-semibold leading-loose">Blog</div>
+      <section className="flex flex-col">
+        <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Blog</div>
         <div className="left-[20px]  flex-col justify-start items-center gap-4 inline-flex">
           <BlogCard title="An algorithm for checking palindrome numbers" publishDate="29 June 2023" />
           <BlogCard title="The Benefits of Automated Data Capture" publishDate="13 June 2023" />
@@ -108,8 +108,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section>
-        <div className="left-[40px]  flex-col justify-start items-center gap-1 inline-flex">
+      <section className="flex flex-col">
+        <div className="mx-auto flex-col justify-start items-center gap-1 inline-flex">
           <div className="text-zinc-700 text-[20px] font-semibold leading-loose">Contact Me</div>
           <div className="w-60 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
         </div>
