@@ -82,9 +82,13 @@ export default function HomePage() {
 
       <section className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Skills</div>
-        <div className="left-[43.50px]  flex-col justify-start items-start gap-4 inline-flex">
-          <SkillCard title="Front-End Engineer" content="Javascript, React, CSS" />
-          <SkillCard title="Back-End Engineer" content="Golang, Java, PHP" />
+        <div className="mx-auto">
+          <div className="my-2">
+          <SkillCard img="/assets/fe-icon.svg" title="Front-End Engineer" content="Javascript, React, CSS" />
+          </div>
+          <div className="my-2">
+          <SkillCard img="/assets/be-icon.svg" title="Back-End Engineer" content="Golang, Java, PHP" />
+          </div>
         </div>
       </section>
 
