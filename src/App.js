@@ -1,4 +1,4 @@
-import Button from './components/Button'
+import {PrimaryButton, SecondaryButton} from './components/Button'
 import NavBar from './components/NavBar'
 import SkillCard from './components/SkillCard'
 import Footer from './components/Footer'
@@ -15,10 +15,8 @@ export default function HomePage() {
         <div className="mx-auto text-zinc-700 text-[14px] font-normal leading-normal">Full-stack Software Engineer</div>
         <div className="mx-auto w-60 left-[40px] text-center text-slate-400 text-[14px] font-normal leading-normal">I like to solve problem and build product which leaves an impact on people lives. Based in Jakarta 🇮🇩</div>
         <div className="flex mx-16">
-          <div className="px-4 py-2  bg-sky-500 rounded justify-center items-center gap-2.5">
-            <div className="text-center text-white text-[14px] font-normal leading-normal">Contact Me</div>
-          </div>
-          <Button content="See Portfolio" />
+          <PrimaryButton content="Contact Me" />
+          <SecondaryButton content="See Portfolio" />
         </div>
       </section>
       <section>
@@ -92,7 +90,7 @@ export default function HomePage() {
           <PortfolioCard title="Shopee Barokah" details="Shopee Barokah provides halal-certified products. Help product sales to grow by 200%." />
           <PortfolioCard title="Cari Kerja" details="Lumina helps companies find the best talent. Help grow business partner by 200%." />
           <PortfolioCard title="Gopay Insurance" details="Gopay is the safest payment method. Help companies acquire and retain customer by 200% " />
-          <Button content="See Github" />
+          <SecondaryButton content="See Github" />
         </div>
       </section>
 
@@ -102,7 +100,7 @@ export default function HomePage() {
           <BlogCard title="An algorithm for checking palindrome numbers" publishDate="29 June 2023" />
           <BlogCard title="The Benefits of Automated Data Capture" publishDate="13 June 2023" />
           <BlogCard title="Data Transformation 101" publishDate="29 June 2023" />
-          <Button content="Visit Blog" />
+          <SecondaryButton content="Visit Blog" />
         </div>
       </section>
 
@@ -118,9 +116,7 @@ export default function HomePage() {
           <textarea className="w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal" placeholder="Message"
             rows="5" cols="33">
           </textarea>
-          <div className="w-[120px] px-4 py-2 bg-sky-500 rounded justify-center items-center gap-2.5 inline-flex">
-            <div className="text-center text-white text-[14px] font-normal leading-normal">Send Message</div>
-          </div>
+          <PrimaryButton content="Send Message"/>
         </div>
       </section>
 
