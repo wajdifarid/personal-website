@@ -31,11 +31,11 @@ export function HamburgerMenu() {
             <button className="h-6" onClick={toggleMenu}><img src="/assets/close-icon.svg" alt="close-icon" /></button>
           </div>
           <div className="flex flex-col justify-start items-start w-full">
-            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#experiences"><button className="h-6" onClick={toggleMenu}>Experiences</button></a>
-            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#skills"><button className="h-6" onClick={toggleMenu}>Skills</button></a>
-            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#portfolio"><button className="h-6" onClick={toggleMenu}>Portfolio</button></a>
-            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#blogs"><button className="h-6" onClick={toggleMenu}>Blogs</button></a>
-            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#contact"><button className="h-6" onClick={toggleMenu}>Contact Me</button></a>
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#experiences" onClick={toggleMenu}><button className="h-6">Experiences</button></a>
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#skills" onClick={toggleMenu}><button className="h-6">Skills</button></a>
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#portfolio" onClick={toggleMenu}><button className="h-6">Portfolio</button></a>
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#blogs" onClick={toggleMenu}><button className="h-6">Blogs</button></a>
+            <a className="p-2 w-full text-zinc-700 text-[14px] font-normal leading-normal hover:bg-sky-500" href="#contact" onClick={toggleMenu}><button className="h-6">Contact Me</button></a>
           </div>
         </div>
       </div>
