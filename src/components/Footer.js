@@ -13,6 +13,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="justify-start items-center gap-2 inline-flex">
+        <img className="min-[16px]" src="/assets/copyright-icon.svg" alt="copyright"/>
         <div className="text-center text-slate-400 text-[14px] font-light leading-normal">Farid Wajdi 2023. All Rights Reserved.</div>
       </div>
     </div>
