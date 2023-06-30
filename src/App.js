@@ -1,4 +1,4 @@
-import {PrimaryButton, SecondaryButton} from './components/Button'
+import { PrimaryButton, SecondaryButton } from './components/Button'
 import NavBar from './components/NavBar'
 import SkillCard from './components/SkillCard'
 import Footer from './components/Footer'
@@ -10,16 +10,16 @@ export default function HomePage() {
     <div className="bg-white">
       <NavBar />
       <section className="flex flex-col my-4">
-        <img className="mx-auto min-h-[200px]" src="https://via.placeholder.com/148x200" alt="Farid"/>
+        <img className="mx-auto min-h-[200px]" src="https://via.placeholder.com/148x200" alt="Farid" />
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Hi, I’m Farid Wajdi</div>
         <div className="mx-auto text-zinc-700 text-[14px] font-normal leading-normal">Full-stack Software Engineer</div>
         <div className="mx-auto my-2 w-60 left-[40px] text-center text-slate-400 text-[14px] font-normal leading-normal">I like to solve problem and build product which leaves an impact on people lives. Based in Jakarta 🇮🇩</div>
         <div className="flex mx-auto my-2">
           <div className="mx-2">
-          <SecondaryButton content="See Portfolio" />
+            <SecondaryButton content="See Portfolio" />
           </div>
           <div className="mx-2">
-          <PrimaryButton content="Contact Me" />
+            <PrimaryButton content="Contact Me" />
           </div>
         </div>
       </section>
@@ -120,10 +120,11 @@ export default function HomePage() {
           <textarea className="w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal" placeholder="Message"
             rows="5" cols="33">
           </textarea>
-          <PrimaryButton content="Send Message"/>
+          <PrimaryButton content="Send Message" />
         </div>
       </section>
-
-      <Footer />
+      <section className="mt-10">
+        <Footer />
+      </section>
     </div>);
 }
