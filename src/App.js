@@ -25,69 +25,94 @@ export default function HomePage() {
       </section>
       <section className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Experiences</div>
-        <div className="w-[265px] h-[392px] left-[28px] ">
-          <div className="left-[154px] top-0  flex-col justify-start items-start gap-1 inline-flex">
-            <img className="w-6 h-6 rounded-sm" src="https://via.placeholder.com/24x24" />
-            <div className="flex-col justify-start items-start flex">
-              <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
-              <div className="text-center text-zinc-700 text-[12px] font-normal leading-none">Lumina</div>
-              <div className="text-center text-zinc-700 text-[12px] font-normal leading-none">Job Platform</div>
-              <div className="text-center text-slate-400 text-[12px] font-normal leading-none">Jan 2022 - Jun 2023</div>
+
+        <div className="mx-auto w-full h-full">
+          <div className="relative">
+            <div className="w-1 absolute bg-zinc-200 h-full border left-[49.75%]"></div>
+            {/* <!-- right timeline --> */}
+            <div className="flex justify-between items-center w-full right-timeline">
+              <div className="w-5/12"></div>
+              <div className="z-20 flex items-center bg-sky-500 w-3 h-3 rounded-full">
+              </div>
+              <div className="w-5/12">
+                <div className="flex flex-col justify-start items-start">
+                  <img className="w-6 h-6 rounded-sm" src="/assets/lumina.png" alt="lumina"/>
+                  <div className="flex flex-col justify-start items-start">
+                    <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
+                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Lumina</div>
+                    <div className="text-left text-slate-400 text-[12px] font-normal leading-none">Feb 2022 - May 2023</div>
+                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Job Platform</div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="left-[154px]  flex-col justify-start items-start gap-1 inline-flex">
-            <img className="w-6 h-6 rounded-sm" src="https://via.placeholder.com/24x24" />
-            <div className="flex-col justify-start items-start flex">
-              <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
-              <div className="text-center text-zinc-700 text-[12px] font-normal leading-none">Stoqo</div>
-              <div className="text-center text-zinc-700 text-[12px] font-normal leading-none">Logistics</div>
-              <div className="text-center text-slate-400 text-[12px] font-normal leading-none">Jun - Aug 2019</div>
+
+            {/* <!-- left timeline --> */}
+            <div className="flex justify-between flex-row-reverse items-center w-full">
+              <div className="w-5/12"></div>
+              <div className="z-20 flex items-center bg-sky-500 w-3 h-3 rounded-full">
+              </div>
+              <div className="w-5/12">
+                <div className="flex flex-col justify-end items-end">
+                  <img className="w-6 h-6 rounded-sm" src="/assets/shopee.png" alt="shopee"/>
+                  <div className="flex flex-col justify-end items-end">
+                    <div className="text-right text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
+                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Shopee</div>
+                    <div className="text-right text-slate-400 text-[12px] font-normal leading-none">Sep 2020 - Jan 2022</div>
+                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Ecommerce</div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="left-0  flex-col justify-start items-end gap-1 inline-flex">
-            <img className="w-6 h-6 rounded-sm" src="https://via.placeholder.com/24x24" />
-            <div className="flex-col justify-start items-end flex">
-              <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
-              <div className="text-center text-zinc-700 text-[12px] font-normal leading-none">Shopee</div>
-              <div className="text-center text-zinc-700 text-[12px] font-normal leading-none">Ecommerce</div>
-              <div className="text-center text-slate-400 text-[12px] font-normal leading-none">Jan 2020 - Jun 2022</div>
+
+            {/* <!-- right timeline --> */}
+            <div className="flex justify-between items-center w-full right-timeline">
+              <div className="w-5/12"></div>
+              <div className="z-20 flex items-center bg-sky-500 w-3 h-3 rounded-full">
+              </div>
+              <div className="w-5/12">
+                <div className="flex flex-col justify-start items-start">
+                  <img className="w-6 h-6 rounded-sm" src="/assets/stoqo.png" alt="stoqo"/>
+                  <div className="flex flex-col justify-start items-start">
+                    <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer Intern</div>
+                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Stoqo</div>
+                    <div className="text-left text-slate-400 text-[12px] font-normal leading-none">Jun 2019 - Aug 2019</div>
+                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Logistics</div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="left-0  flex-col justify-center items-end gap-1 inline-flex">
-            <img className="w-6 h-6 rounded-sm" src="https://via.placeholder.com/24x24" />
-            <div className="flex-col justify-center items-end flex">
-              <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
-              <div className="text-center text-zinc-700 text-[12px] font-normal leading-none">Gojek</div>
-              <div className="text-center text-zinc-700 text-[12px] font-normal leading-none">Transport</div>
-              <div className="text-center text-slate-400 text-[12px] font-normal leading-none">Jun - Aug 2018</div>
+
+            {/* <!-- left timeline --> */}
+            <div className="flex justify-between flex-row-reverse items-center w-full">
+              <div className="w-5/12"></div>
+              <div className="z-20 flex items-center bg-sky-500 w-3 h-3 rounded-full">
+              </div>
+              <div className="w-5/12">
+                <div className="flex flex-col justify-end items-end">
+                  <img className="w-6 h-6 rounded-sm" src="/assets/gojek.png" alt="gojek"/>
+                  <div className="flex flex-col justify-end items-end">
+                    <div className="text-right text-zinc-700 text-[12px] font-bold leading-none">Full Stack Engineer Intern</div>
+                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Gojek</div>
+                    <div className="text-right text-slate-400 text-[12px] font-normal leading-none">Jun 2018 - Aug 2018</div>
+                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Transport</div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="left-[126px] flex-col justify-start items-start inline-flex">
-            <div className="w-3 h-[100px] relative">
-              <div className="w-1 h-[100px] left-[4px] top-0  bg-zinc-200 rounded-tl-lg rounded-tr-lg" />
-              <div className="w-3 h-3 left-0 top-0  bg-sky-500 rounded-full" />
-            </div>
-            <div className="w-3 h-[100px] relative">
-              <div className="w-1 h-[100px] left-[4px] top-0  bg-zinc-200 rounded-tl-lg rounded-tr-lg" />
-              <div className="w-3 h-3 left-0 top-0  bg-sky-500 rounded-full border border-sky-500" />
-            </div>
-            <div className="w-3 h-[100px] relative">
-              <div className="w-1 h-[100px] left-[4px] top-0  bg-zinc-200 rounded-tl-lg rounded-tr-lg" />
-              <div className="w-3 h-3 left-0 top-0  bg-sky-500 rounded-full" />
-            </div>
-            <div className="w-3 h-3 bg-sky-500 rounded-full" />
           </div>
         </div>
+
       </section>
 
       <section className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Skills</div>
         <div className="mx-auto">
           <div className="my-2">
-          <SkillCard img="/assets/fe-icon.svg" title="Front-End Engineer" content="Javascript, React, CSS" />
+            <SkillCard img="/assets/fe-icon.svg" title="Front-End Engineer" content="Javascript, React, CSS" />
           </div>
           <div className="my-2">
-          <SkillCard img="/assets/be-icon.svg" title="Back-End Engineer" content="Golang, Java, PHP" />
+            <SkillCard img="/assets/be-icon.svg" title="Back-End Engineer" content="Golang, Java, PHP" />
           </div>
         </div>
       </section>
