@@ -36,7 +36,7 @@ export default function HomePage() {
               </div>
               <div className="w-5/12">
                 <div className="flex flex-col justify-start items-start">
-                  <img className="w-6 h-6 rounded-sm" src="/assets/lumina.png" alt="lumina"/>
+                  <img className="w-6 h-6 rounded-sm" src="/assets/lumina.png" alt="lumina" />
                   <div className="flex flex-col justify-start items-start">
                     <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
                     <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Lumina</div>
@@ -54,7 +54,7 @@ export default function HomePage() {
               </div>
               <div className="w-5/12">
                 <div className="flex flex-col justify-end items-end">
-                  <img className="w-6 h-6 rounded-sm" src="/assets/shopee.png" alt="shopee"/>
+                  <img className="w-6 h-6 rounded-sm" src="/assets/shopee.png" alt="shopee" />
                   <div className="flex flex-col justify-end items-end">
                     <div className="text-right text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
                     <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Shopee</div>
@@ -72,7 +72,7 @@ export default function HomePage() {
               </div>
               <div className="w-5/12">
                 <div className="flex flex-col justify-start items-start">
-                  <img className="w-6 h-6 rounded-sm" src="/assets/stoqo.png" alt="stoqo"/>
+                  <img className="w-6 h-6 rounded-sm" src="/assets/stoqo.png" alt="stoqo" />
                   <div className="flex flex-col justify-start items-start">
                     <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer Intern</div>
                     <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Stoqo</div>
@@ -90,7 +90,7 @@ export default function HomePage() {
               </div>
               <div className="w-5/12">
                 <div className="flex flex-col justify-end items-end">
-                  <img className="w-6 h-6 rounded-sm" src="/assets/gojek.png" alt="gojek"/>
+                  <img className="w-6 h-6 rounded-sm" src="/assets/gojek.png" alt="gojek" />
                   <div className="flex flex-col justify-end items-end">
                     <div className="text-right text-zinc-700 text-[12px] font-bold leading-none">Full Stack Engineer Intern</div>
                     <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Gojek</div>
@@ -138,17 +138,29 @@ export default function HomePage() {
       </section>
 
       <section className="flex flex-col">
-        <div className="mx-auto flex-col justify-start items-center gap-1 inline-flex">
+        <div className="mx-auto flex-col justify-start items-center gap-1 inline-flex my-2">
           <div className="text-zinc-700 text-[20px] font-semibold leading-loose">Contact Me</div>
           <div className="w-60 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
         </div>
-        <div className="left-[40px]  flex-col justify-start items-center gap-4 inline-flex">
-          <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Full name" />
-          <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Email" type="email" />
-          <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Subject" />
-          <textarea className="w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message"
-            rows="5" cols="33">
-          </textarea>
+        <div className="left-[40px]  flex-col justify-start items-center gap-4 inline-flex my-2">
+          <div>
+            <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Full Name</div>
+            <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Full name" />
+          </div>
+          <div>
+            <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Email</div>
+            <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Email" type="email" />
+          </div>
+          <div>
+            <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Subject</div>
+            <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Subject" />
+          </div>
+          <div>
+            <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Message</div>
+            <textarea className="w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message"
+              rows="5" cols="33">
+            </textarea>
+          </div>
           <PrimaryButton content="Send Message" />
         </div>
       </section>
