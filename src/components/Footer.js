@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="w-80 h-[140.24px] px-4 py-8 bg-slate-100 flex-col justify-start items-center gap-5 inline-flex">
+    <div className="flex flex-col px-4 py-8 bg-slate-100 justify-start items-center gap-5">
       <div className="justify-start items-center gap-5 inline-flex">
         <div className="w-8 h-8 relative">
           <img className="w-8 h-8 left-0 top-0 absolute bg-sky-500 rounded-full" src="/assets/email-icon.svg" alt="email"/>
