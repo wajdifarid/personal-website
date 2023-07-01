@@ -22,7 +22,7 @@ export function HamburgerMenu() {
     </div>
     {isOpen && (
       <div>
-        <div className="w-2/6 h-screen bg-black bg-opacity-80 top-0 left-0 fixed z-20">
+        <div className="w-2/6 h-screen bg-black bg-opacity-80 top-0 left-0 fixed z-20" onClick={toggleMenu}>
 
         </div>
         <div className="flex flex-col w-4/6 bg-white justify-start items-start fixed right-0 top-0 h-screen z-20">
