@@ -1,4 +1,6 @@
+import React, { useState } from 'react';
 import { PrimaryButton, SecondaryButton } from './components/Button'
+
 import NavBar from './components/NavBar'
 import SkillCard from './components/SkillCard'
 import Footer from './components/Footer'
@@ -6,6 +8,27 @@ import BlogCard from './components/BlogCard'
 import PortfolioCard from "./components/PortfolioCard"
 
 export default function HomePage() {
+  const [formStatus, setFormStatus] = useState(null);
+
+  function handleSubmit(e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+  
+      fetch('https://script.google.com/macros/s/AKfycbz5FMGJYSrZNHx73vg2K2tYOUuF-unC5EpaV4kQzJe-ENzE0F5DWopwk18wPo9Rf7Iq/exec', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          setFormStatus(data.status);
+          // Handle the form submission status as needed
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          // Handle the error
+        });
+    }
+
   return (
     <div className="bg-white">
       <NavBar />
@@ -16,14 +39,14 @@ export default function HomePage() {
         <div className="mx-auto my-2 w-60 left-[40px] text-center text-slate-400 text-[14px] font-normal leading-normal">I like to solve problem and build product which leaves an impact on people lives. Based in Jakarta 🇮🇩</div>
         <div className="flex mx-auto my-2">
           <div className="mx-2">
-          <a href="#portfolio">
-            <SecondaryButton content="See Portfolio" />
-          </a>
+            <a href="#portfolio">
+              <SecondaryButton content="See Portfolio" />
+            </a>
           </div>
           <div className="mx-2">
-          <a href="#contact">
-            <PrimaryButton content="Contact Me" />
-          </a>
+            <a href="#contact">
+              <PrimaryButton content="Contact Me" />
+            </a>
           </div>
         </div>
       </section>
@@ -140,7 +163,7 @@ export default function HomePage() {
           <BlogCard title="The Benefits of Automated Data Capture" publishDate="13 June 2023" />
           <BlogCard title="Data Transformation 101" publishDate="29 June 2023" />
           <a href="https://wajdifarid.substack.com/" target="_blank" rel="noreferrer">
-          <SecondaryButton content="Visit Blog" />
+            <SecondaryButton content="Visit Blog" />
           </a>
         </div>
       </section>
@@ -151,25 +174,33 @@ export default function HomePage() {
           <div className="w-60 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
         </div>
         <div className="left-[40px]  flex-col justify-start items-center gap-4 inline-flex my-2">
-          <div>
-            <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Full Name</div>
-            <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Full name" />
-          </div>
-          <div>
-            <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Email</div>
-            <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Email" type="email" />
-          </div>
-          <div>
-            <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Subject</div>
-            <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Subject" />
-          </div>
-          <div>
-            <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Message</div>
-            <textarea className="w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message"
-              rows="5" cols="33">
-            </textarea>
-          </div>
-          <PrimaryButton content="Send Message" />
+        {formStatus === 'success' && (
+  <div>Form submitted successfully!</div>
+)}
+
+          <form onSubmit={handleSubmit}>
+            <div>
+              <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Full Name</div>
+              <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Full name" name="name" required />
+            </div>
+            <div>
+              <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Email</div>
+              <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Email" type="email" name="email" required />
+            </div>
+            <div>
+              <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Subject</div>
+              <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Subject" name="subject" required />
+            </div>
+            <div>
+              <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Message</div>
+              <textarea className="w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message" name="message"
+                rows="5" cols="33" required>
+              </textarea>
+            </div>
+            <div className="mx-auto px-10">
+              <PrimaryButton content={<input className="h-full w-full" type="submit" value="Send Message" />} />
+            </div>
+          </form>
         </div>
       </section>
       <section className="mt-10">
