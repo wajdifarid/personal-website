@@ -19,9 +19,9 @@ export function HamburgerMenu() {
   return (
     <>
     <div>
-        <div className={"fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-80 z-20 " + (isOpen ? "hidden" : "")} onClick={toggleMenu}>
+        <div className={"fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-80 z-20 " + (isOpen ? "" : "hidden")} onClick={toggleMenu}>
         </div>
-        <div className={"fixed top-0 right-0 w-4/6 h-screen bg-white z-20 transition-transform duration-500 transform " + (isOpen ? "translate-x-full" : "translate-x-0")}>
+        <div className={"fixed top-0 right-0 w-4/6 h-screen bg-white z-20 transition-transform duration-500 transform " + (isOpen ? "translate-x-0" : "translate-x-full")}>
           <div className="w-full p-4 border border-zinc-200 justify-between items-center gap-2.5 inline-flex">
             <div className="text-center text-sky-500 text-[20px] font-black leading-loose">FW</div>
             <button className="h-6" onClick={toggleMenu}><img src="/assets/close-icon.svg" alt="close-icon" /></button>
