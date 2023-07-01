@@ -16,10 +16,14 @@ export default function HomePage() {
         <div className="mx-auto my-2 w-60 left-[40px] text-center text-slate-400 text-[14px] font-normal leading-normal">I like to solve problem and build product which leaves an impact on people lives. Based in Jakarta 🇮🇩</div>
         <div className="flex mx-auto my-2">
           <div className="mx-2">
+          <a href="#portfolio">
             <SecondaryButton content="See Portfolio" />
+          </a>
           </div>
           <div className="mx-2">
+          <a href="#contact">
             <PrimaryButton content="Contact Me" />
+          </a>
           </div>
         </div>
       </section>
@@ -123,7 +127,9 @@ export default function HomePage() {
           <PortfolioCard title="Shopee Barokah" details="Shopee Barokah provides halal-certified products. Help product sales to grow by 200%." />
           <PortfolioCard title="Cari Kerja" details="Lumina helps companies find the best talent. Help grow business partner by 200%." />
           <PortfolioCard title="Gopay Insurance" details="Gopay is the safest payment method. Help companies acquire and retain customer by 200% " />
-          <SecondaryButton content="See Github" />
+          <a href="https://github.com/wajdifarid" target="_blank" rel="noreferrer">
+            <SecondaryButton content="See Github" />
+          </a>
         </div>
       </section>
 
@@ -133,7 +139,9 @@ export default function HomePage() {
           <BlogCard title="An algorithm for checking palindrome numbers" publishDate="29 June 2023" />
           <BlogCard title="The Benefits of Automated Data Capture" publishDate="13 June 2023" />
           <BlogCard title="Data Transformation 101" publishDate="29 June 2023" />
+          <a href="https://wajdifarid.substack.com/" target="_blank" rel="noreferrer">
           <SecondaryButton content="Visit Blog" />
+          </a>
         </div>
       </section>
 
