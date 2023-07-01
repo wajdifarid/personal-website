@@ -11,23 +11,19 @@ export default function HomePage() {
   const [formStatus, setFormStatus] = useState(null);
 
   function handleSubmit(e) {
-      e.preventDefault();
-      const formData = new FormData(e.target);
-  
-      fetch('https://script.google.com/macros/s/AKfycbz5FMGJYSrZNHx73vg2K2tYOUuF-unC5EpaV4kQzJe-ENzE0F5DWopwk18wPo9Rf7Iq/exec', {
-        method: 'POST',
-        body: formData,
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          setFormStatus(data.status);
-          // Handle the form submission status as needed
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-          // Handle the error
-        });
-    }
+    e.preventDefault();
+    const formData = new URLSearchParams(new FormData(e.target));
+
+    fetch("https://script.google.com/macros/s/AKfycbySY6JJJxwHF-rOd85QE4xkn2UjM3rovC3UR3_IKEA_F6FqObFMSyl9tFAgYwEKIWBN/exec", {
+      "headers": {
+        "content-type": "application/x-www-form-urlencoded",
+      },
+      "body": formData,
+      "method": "POST",
+      "mode": "no-cors",
+      "credentials": "include"
+    });
+  }
 
   return (
     <div className="bg-white">
@@ -174,9 +170,9 @@ export default function HomePage() {
           <div className="w-60 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
         </div>
         <div className="left-[40px]  flex-col justify-start items-center gap-4 inline-flex my-2">
-        {formStatus === 'success' && (
-  <div>Form submitted successfully!</div>
-)}
+          {formStatus === 'success' && (
+            <div>Form submitted successfully!</div>
+          )}
 
           <form onSubmit={handleSubmit}>
             <div>
