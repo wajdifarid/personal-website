@@ -17,7 +17,7 @@ export default function HomePage() {
     e.preventDefault();
     const formData = new URLSearchParams(new FormData(e.target));
 
-    fetch("https://script.google.com/macros/s/AKfycbySY6JJJxwHF-rOd85QE4xkn2UjM3rovC3UR3_IKEA_F6FqObFMSyl9tFAgYwEKIWBN/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbw8L2GYlMhT2Pz4dPupnjiAkof7W_jVcDqbw7AHCKbXtOLkz27P5d4WMnxSznTJS6U/exec", {
       "headers": {
         "content-type": "application/x-www-form-urlencoded",
       },
