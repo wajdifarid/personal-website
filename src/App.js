@@ -30,7 +30,7 @@ export default function HomePage() {
       setTimeout(() => {
         setShowSnackbar(false);
       }, 3000)
-    });
+    }).then(() => e.target.reset());
   }
 
   return (
@@ -202,9 +202,13 @@ export default function HomePage() {
               </textarea>
             </div>
             <div className="mx-auto px-10">
-              <button type="submit">
-                {isFormSubmitting ? (<div className="animate-pulse"><div className="rounded-full bg-slate-700 h-10 w-10"></div></div>) : (<PrimaryButton content="Send Message" />)}
-              </button>
+              
+                {isFormSubmitting ? (<PrimaryButton content={<div className="flex items-center justify-center animate-pulse">
+                    <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
+                    <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
+                    <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
+                </div>}/>) : (<button type="submit"><PrimaryButton content="Send Message" /></button>)}
+              
               {showSnackbar && (<SnackBar/>)}
             </div>
           </form>
