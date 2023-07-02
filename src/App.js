@@ -140,10 +140,13 @@ export default function HomePage() {
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Skills</div>
         <div className="mx-auto">
           <div className="my-2">
-            <SkillCard img="/assets/fe-icon.svg" title="Front-End Engineer" content="Javascript, React, CSS" />
+            <SkillCard img="/assets/fe-icon.svg" title="Front-End Engineer" content="React, HTML, CSS, Javascript" />
           </div>
           <div className="my-2">
-            <SkillCard img="/assets/be-icon.svg" title="Back-End Engineer" content="Golang, Java, PHP" />
+            <SkillCard img="/assets/be-icon.svg" title="Back-End Engineer" content="Python, Golang, JavaScript, PostgreSQL, Redis" />
+          </div>
+          <div className="my-2">
+            <SkillCard img="/assets/devops-icon.svg" title="DevOps Engineer" content="AWS, GCP, Github Actions, Terraform" />
           </div>
         </div>
       </section>
@@ -151,9 +154,9 @@ export default function HomePage() {
       <section id="portfolio" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Portfolio</div>
         <div className="flex-col justify-start items-center gap-4 inline-flex">
-          <PortfolioCard title="Shopee Barokah" details="Shopee Barokah provides halal-certified products. Help product sales to grow by 200%." />
-          <PortfolioCard title="Cari Kerja" details="Lumina helps companies find the best talent. Help grow business partner by 200%." />
-          <PortfolioCard title="Gopay Insurance" details="Gopay is the safest payment method. Help companies acquire and retain customer by 200% " />
+        <a href="https://github.com/wajdifarid/pick-up-turn" target="_blank" rel="noreferrer">
+          <PortfolioCard title="Pickup Turn" details="Displays the order in which individuals from a group take their turns. It had 3 active users for several months" />
+        </a>
           <a href="https://github.com/wajdifarid" target="_blank" rel="noreferrer">
             <SecondaryButton content="See Github" />
           </a>
@@ -163,9 +166,9 @@ export default function HomePage() {
       <section id="blogs" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Blog</div>
         <div className="left-[20px]  flex-col justify-start items-center gap-4 inline-flex">
-          <BlogCard title="An algorithm for checking palindrome numbers" publishDate="29 June 2023" />
-          <BlogCard title="The Benefits of Automated Data Capture" publishDate="13 June 2023" />
-          <BlogCard title="Data Transformation 101" publishDate="29 June 2023" />
+        <a href="https://wajdifarid.substack.com/p/coming-soon" target="_blank" rel="noreferrer">
+          <BlogCard title="Coming Soon" publishDate="26 June 2023" />
+        </a>
           <a href="https://wajdifarid.substack.com/" target="_blank" rel="noreferrer">
             <SecondaryButton content="Visit Blog" />
           </a>
