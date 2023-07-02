@@ -6,11 +6,14 @@ import SkillCard from './components/SkillCard'
 import Footer from './components/Footer'
 import BlogCard from './components/BlogCard'
 import PortfolioCard from "./components/PortfolioCard"
+import SnackBar from "./components/SnackBar";
 
 export default function HomePage() {
-  const [formStatus, setFormStatus] = useState(null);
+  const [isFormSubmitting, setIsFormSubmitting] = useState(false);
+  const [showSnackbar, setShowSnackbar] = useState(false);
 
   function handleSubmit(e) {
+    setIsFormSubmitting(true)
     e.preventDefault();
     const formData = new URLSearchParams(new FormData(e.target));
 
@@ -22,6 +25,11 @@ export default function HomePage() {
       "method": "POST",
       "mode": "no-cors",
       "credentials": "include"
+    }).then(() => setIsFormSubmitting(false)).then(() => {
+      setShowSnackbar(true);
+      setTimeout(() => {
+        setShowSnackbar(false);
+      }, 3000)
     });
   }
 
@@ -142,7 +150,7 @@ export default function HomePage() {
 
       <section id="portfolio" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Portfolio</div>
-        <div className="left-[20px]  flex-col justify-start items-center gap-4 inline-flex">
+        <div className="flex-col justify-start items-center gap-4 inline-flex">
           <PortfolioCard title="Shopee Barokah" details="Shopee Barokah provides halal-certified products. Help product sales to grow by 200%." />
           <PortfolioCard title="Cari Kerja" details="Lumina helps companies find the best talent. Help grow business partner by 200%." />
           <PortfolioCard title="Gopay Insurance" details="Gopay is the safest payment method. Help companies acquire and retain customer by 200% " />
@@ -170,7 +178,7 @@ export default function HomePage() {
           <div className="w-60 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
         </div>
         <div className="left-[40px]  flex-col justify-start items-center gap-4 inline-flex my-2">
-          {formStatus === 'success' && (
+          {isFormSubmitting === 'success' && (
             <div>Form submitted successfully!</div>
           )}
 
@@ -194,7 +202,10 @@ export default function HomePage() {
               </textarea>
             </div>
             <div className="mx-auto px-10">
-              <PrimaryButton content={<input className="h-full w-full" type="submit" value="Send Message" />} />
+              <button type="submit">
+                {isFormSubmitting ? (<div className="animate-pulse"><div className="rounded-full bg-slate-700 h-10 w-10"></div></div>) : (<PrimaryButton content="Send Message" />)}
+              </button>
+              {showSnackbar && (<SnackBar/>)}
             </div>
           </form>
         </div>
