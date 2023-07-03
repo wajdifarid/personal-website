@@ -69,11 +69,11 @@ export default function HomePage() {
               <div className="w-5/12">
                 <div className="flex flex-col justify-start items-start">
                   <img className="w-6 h-6 rounded-sm" src="/assets/lumina.png" alt="lumina" />
-                  <div className="flex flex-col justify-start items-start">
-                    <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
-                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Lumina</div>
-                    <div className="text-left text-slate-400 text-[12px] font-normal leading-none">Feb 2022 - May 2023</div>
-                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Job Platform</div>
+                  <div className="flex flex-col justify-start items-start w-40 max-w-full">
+                    <div className="text-zinc-700 text-[12px] font-bold leading-4">Software Engineer</div>
+                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-4">Lumina (YC W22)</div>
+                    <div className="text-left text-slate-400 text-[12px] font-normal leading-4">Feb 2022 - May 2023</div>
+                    <div className="text-left  text-zinc-700 text-[12px] font-normal leading-4">Lumina is a job platform in Southeast Asia with 1 million workers. Backed by Y-Combinator, Alpha JWC, Monk's Hill Ventures, Goodwater Capital, and SWC Global</div>
                   </div>
                 </div>
               </div>
@@ -87,11 +87,11 @@ export default function HomePage() {
               <div className="w-5/12">
                 <div className="flex flex-col justify-end items-end">
                   <img className="w-6 h-6 rounded-sm" src="/assets/shopee.png" alt="shopee" />
-                  <div className="flex flex-col justify-end items-end">
-                    <div className="text-right text-zinc-700 text-[12px] font-bold leading-none">Software Engineer</div>
-                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Shopee</div>
-                    <div className="text-right text-slate-400 text-[12px] font-normal leading-none">Sep 2020 - Jan 2022</div>
-                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Ecommerce</div>
+                  <div className="flex flex-col justify-end items-end w-40 max-w-full">
+                    <div className="text-right text-zinc-700 text-[12px] font-bold leading-4">Software Engineer</div>
+                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-4">Shopee</div>
+                    <div className="text-right text-slate-400 text-[12px] font-normal leading-4">Sep 2020 - Jan 2022</div>
+                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-4">Shopee is a leading e-commerce platform in Southeast Asia and Taiwan, providing a secure and fast online shopping experience. Shopee is a part of Sea, a company listed on the NYSE under the symbol SE</div>
                   </div>
                 </div>
               </div>
@@ -105,29 +105,29 @@ export default function HomePage() {
               <div className="w-5/12">
                 <div className="flex flex-col justify-start items-start">
                   <img className="w-6 h-6 rounded-sm" src="/assets/stoqo.png" alt="stoqo" />
-                  <div className="flex flex-col justify-start items-start">
-                    <div className="text-zinc-700 text-[12px] font-bold leading-none">Software Engineer Intern</div>
-                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Stoqo</div>
-                    <div className="text-left text-slate-400 text-[12px] font-normal leading-none">Jun 2019 - Aug 2019</div>
-                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-none">Logistics</div>
+                  <div className="flex flex-col justify-start items-start w-40 max-w-full">
+                    <div className="text-zinc-700 text-[12px] font-bold leading-4">Software Engineer Intern</div>
+                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-4">Stoqo</div>
+                    <div className="text-left text-slate-400 text-[12px] font-normal leading-4">Jun 2019 - Aug 2019</div>
+                    <div className="text-left text-zinc-700 text-[12px] font-normal leading-4">STOQO streamlines the F&B supply chain and empowers small businesses with quality ingredients</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* <!-- left timeline --> */}
-            <div className="flex justify-between flex-row-reverse items-center w-full">
+            <div className="flex justify-between flex-row-reverse items-center">
               <div className="w-5/12"></div>
               <div className="relative z-10 flex items-center bg-sky-500 w-3 h-3 rounded-full">
               </div>
               <div className="w-5/12">
                 <div className="flex flex-col justify-end items-end">
                   <img className="w-6 h-6 rounded-sm" src="/assets/gojek.png" alt="gojek" />
-                  <div className="flex flex-col justify-end items-end">
-                    <div className="text-right text-zinc-700 text-[12px] font-bold leading-none">Full Stack Engineer Intern</div>
-                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Gojek</div>
-                    <div className="text-right text-slate-400 text-[12px] font-normal leading-none">Jun 2018 - Aug 2018</div>
-                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-none">Transport</div>
+                  <div className="flex flex-col justify-end items-end w-40 max-w-full">
+                    <div className="text-right text-zinc-700 text-[12px] font-bold leading-4">Full Stack Engineer Intern</div>
+                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-4">Gojek</div>
+                    <div className="text-right text-slate-400 text-[12px] font-normal leading-4">Jun 2018 - Aug 2018</div>
+                    <div className="text-right text-zinc-700 text-[12px] font-normal leading-4">Gojek is the top on-demand platform in Southeast Asia, providing transportation, food delivery, logistics, and more. Notable investors include Google, Tencent, JD.com, Mitsubishi Corporation, and Visa</div>
                   </div>
                 </div>
               </div>
