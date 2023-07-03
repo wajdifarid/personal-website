@@ -7,7 +7,13 @@ module.exports = {
     fontFamily: {
       'body': ['"Noto Sans"'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        sky:{
+          500: '#00A8FF'
+        }
+      }
+    },
   },
   plugins: [],
 }
