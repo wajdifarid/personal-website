@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import BlogCard from './components/BlogCard'
 import PortfolioCard from "./components/PortfolioCard"
 import SnackBar from "./components/SnackBar";
+import DesktopNotificationWIP from "./components/DesktopNotificationWIP";
 
 export default function HomePage() {
   const [isFormSubmitting, setIsFormSubmitting] = useState(false);
@@ -36,6 +37,7 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       <NavBar />
+      <DesktopNotificationWIP/>
       <section className="flex flex-col my-8">
         <img className="mx-auto h-36 rounded-full sm:h-96" src="/assets/profile-picture.jpg" alt="Farid Wajdi" />
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Hi, I’m Farid Wajdi</div>
@@ -153,9 +155,9 @@ export default function HomePage() {
       <section id="portfolio" className="flex flex-col my-12">
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Portfolio</div>
         <div className="flex-col justify-start items-center gap-4 inline-flex">
-        <a href="https://github.com/wajdifarid/pick-up-turn" target="_blank" rel="noreferrer">
-          <PortfolioCard title="Pickup Turn" details="Displays the order in which individuals from a group take their turns. It had 3 active users for several months" />
-        </a>
+          <a href="https://github.com/wajdifarid/pick-up-turn" target="_blank" rel="noreferrer">
+            <PortfolioCard title="Pickup Turn" details="Displays the order in which individuals from a group take their turns. It had 3 active users for several months" />
+          </a>
           <a href="https://github.com/wajdifarid" target="_blank" rel="noreferrer">
             <SecondaryButton content="See Github" />
           </a>
@@ -165,9 +167,9 @@ export default function HomePage() {
       <section id="blogs" className="flex flex-col my-12">
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Blog</div>
         <div className="left-[20px]  flex-col justify-start items-center gap-4 inline-flex">
-        <a href="https://wajdifarid.substack.com/p/coming-soon" target="_blank" rel="noreferrer">
-          <BlogCard title="Coming Soon" publishDate="26 June 2023" />
-        </a>
+          <a href="https://wajdifarid.substack.com/p/coming-soon" target="_blank" rel="noreferrer">
+            <BlogCard title="Coming Soon" publishDate="26 June 2023" />
+          </a>
           <a href="https://wajdifarid.substack.com/" target="_blank" rel="noreferrer">
             <SecondaryButton content="Visit Blog" />
           </a>
@@ -204,14 +206,14 @@ export default function HomePage() {
               </textarea>
             </div>
             <div className="mx-auto px-10">
-              
-                {isFormSubmitting ? (<PrimaryButton content={<div className="flex items-center justify-center animate-pulse">
-                    <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
-                    <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
-                    <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
-                </div>}/>) : (<button type="submit"><PrimaryButton content="Send Message" /></button>)}
-              
-              {showSnackbar && (<SnackBar/>)}
+
+              {isFormSubmitting ? (<PrimaryButton content={<div className="flex items-center justify-center animate-pulse">
+                <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
+                <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
+                <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
+              </div>} />) : (<button type="submit"><PrimaryButton content="Send Message" /></button>)}
+
+              {showSnackbar && (<SnackBar />)}
             </div>
           </form>
         </div>
