@@ -39,7 +39,7 @@ export default function HomePage() {
       <NavBar />
       <DesktopNotificationWIP/>
       <section className="flex flex-col my-8">
-        <img className="mx-auto h-36 rounded-full sm:h-96" src="/assets/profile-picture.jpg" alt="Farid Wajdi" />
+        <img className="mx-auto h-36 rounded-full sm:h-72" src="/assets/profile-picture.jpg" alt="Farid Wajdi" />
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Hi, I’m Farid Wajdi</div>
         <div className="mx-auto text-zinc-700 text-[14px] font-normal leading-normal">Full-stack Software Engineer</div>
         <div className="mx-auto my-2 w-60 left-[40px] text-center text-slate-400 text-[14px] font-normal leading-normal">I like to solve problem and build product which leaves an impact on people lives. Based in Jakarta 🇮🇩</div>
