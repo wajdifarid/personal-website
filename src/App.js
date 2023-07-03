@@ -141,7 +141,7 @@ export default function HomePage() {
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Skills</div>
         <div className="mx-auto">
           <div className="m-2">
-            <SkillCard img="/assets/fe-icon.svg" title="Front-End Engineer" content="React, HTML, CSS, Javascript" />
+            <SkillCard img="/assets/fe-icon.svg" title="Front-End Engineer" content="React, Tailwind, HTML, CSS, Javascript" />
           </div>
           <div className="m-2">
             <SkillCard img="/assets/be-icon.svg" title="Back-End Engineer" content="Python, Golang, JavaScript, PostgreSQL, Redis" />
