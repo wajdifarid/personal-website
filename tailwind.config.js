@@ -13,6 +13,9 @@ module.exports = {
       colors: {
         sky:{
           500: '#00A8FF'
+        },
+        slate:{
+          500: '#718093'
         }
       }
     },

@@ -36,7 +36,7 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       <NavBar />
-      <section className="flex flex-col my-4">
+      <section className="flex flex-col my-8">
         <img className="mx-auto h-36 rounded-full sm:h-96" src="/assets/profile-picture.jpg" alt="Farid Wajdi" />
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Hi, I’m Farid Wajdi</div>
         <div className="mx-auto text-zinc-700 text-[14px] font-normal leading-normal">Full-stack Software Engineer</div>
@@ -54,9 +54,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section id="experiences" className="flex flex-col">
-        <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Experiences</div>
-
+      <section id="experiences" className="flex flex-col my-12">
+        <div className="mx-auto font-bold text-zinc-700 text-[1.25rem] leading-loose">Experiences</div>
         <div className="mx-auto w-full h-full">
           <div className="relative">
             <div className="w-1 absolute bg-zinc-200 h-full border left-[49.75%]"></div>
@@ -136,23 +135,23 @@ export default function HomePage() {
 
       </section>
 
-      <section id="skills" className="flex flex-col">
-        <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Skills</div>
+      <section id="skills" className="flex flex-col my-12">
+        <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Skills</div>
         <div className="mx-auto">
-          <div className="my-2">
+          <div className="m-2">
             <SkillCard img="/assets/fe-icon.svg" title="Front-End Engineer" content="React, HTML, CSS, Javascript" />
           </div>
-          <div className="my-2">
+          <div className="m-2">
             <SkillCard img="/assets/be-icon.svg" title="Back-End Engineer" content="Python, Golang, JavaScript, PostgreSQL, Redis" />
           </div>
-          <div className="my-2">
+          <div className="m-2">
             <SkillCard img="/assets/devops-icon.svg" title="DevOps Engineer" content="AWS, GCP, Github Actions, Terraform" />
           </div>
         </div>
       </section>
 
-      <section id="portfolio" className="flex flex-col">
-        <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Portfolio</div>
+      <section id="portfolio" className="flex flex-col my-12">
+        <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Portfolio</div>
         <div className="flex-col justify-start items-center gap-4 inline-flex">
         <a href="https://github.com/wajdifarid/pick-up-turn" target="_blank" rel="noreferrer">
           <PortfolioCard title="Pickup Turn" details="Displays the order in which individuals from a group take their turns. It had 3 active users for several months" />
@@ -163,8 +162,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="blogs" className="flex flex-col">
-        <div className="mx-auto text-zinc-700 text-[20px] font-semibold leading-loose">Blog</div>
+      <section id="blogs" className="flex flex-col my-12">
+        <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Blog</div>
         <div className="left-[20px]  flex-col justify-start items-center gap-4 inline-flex">
         <a href="https://wajdifarid.substack.com/p/coming-soon" target="_blank" rel="noreferrer">
           <BlogCard title="Coming Soon" publishDate="26 June 2023" />
@@ -175,9 +174,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="flex flex-col">
+      <section id="contact" className="flex flex-col my-12">
         <div className="mx-auto flex-col justify-start items-center gap-1 inline-flex my-2">
-          <div className="text-zinc-700 text-[20px] font-semibold leading-loose">Contact Me</div>
+          <div className="text-zinc-700 text-[20px] font-bold leading-loose">Contact Me</div>
           <div className="w-60 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
         </div>
         <div className="left-[40px]  flex-col justify-start items-center gap-4 inline-flex my-2">
@@ -186,21 +185,21 @@ export default function HomePage() {
           )}
 
           <form onSubmit={handleSubmit}>
-            <div>
+            <div className="my-2">
               <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Full Name</div>
-              <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Full name" name="name" required />
+              <input className="my-2 w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Full name" name="name" required />
             </div>
-            <div>
+            <div className="my-2">
               <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Email</div>
-              <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Email" type="email" name="email" required />
+              <input className="my-2 w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Email" type="email" name="email" required />
             </div>
-            <div>
+            <div className="my-2">
               <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Subject</div>
-              <input className="w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Subject" name="subject" required />
+              <input className="my-2 w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Subject" name="subject" required />
             </div>
-            <div>
+            <div className="my-2">
               <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Message</div>
-              <textarea className="w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message" name="message"
+              <textarea className="my-2 w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message" name="message"
                 rows="5" cols="33" required>
               </textarea>
             </div>
