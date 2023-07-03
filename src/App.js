@@ -156,7 +156,7 @@ export default function HomePage() {
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Portfolio</div>
         <div className="flex-col justify-start items-center gap-4 inline-flex">
           <a href="https://github.com/wajdifarid/pick-up-turn" target="_blank" rel="noreferrer">
-            <PortfolioCard title="Pickup Turn" details="Displays the order in which individuals from a group take their turns. It had 3 active users for several months" />
+            <PortfolioCard imgSrc="/assets/pickup-turn.jpg" title="Pickup Turn" details="Displays the order in which individuals from a group take their turns. It had 3 active users for several months" />
           </a>
           <a href="https://github.com/wajdifarid" target="_blank" rel="noreferrer">
             <SecondaryButton content="See Github" />
