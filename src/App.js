@@ -120,7 +120,7 @@ export default function HomePage() {
 
       <section id="skills" className="flex flex-col my-12">
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Skills</div>
-        <div className="mx-auto">
+        <div className="mx-auto flex flex-col lg:flex-row">
           <div className="m-2">
             <SkillCard img="/assets/fe-icon.svg" title="Front-End Engineer" content="React, Tailwind, HTML, CSS, Javascript" />
           </div>
