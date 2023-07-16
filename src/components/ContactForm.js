@@ -29,43 +29,38 @@ export default function ContactForm() {
     }
     
     return (
-        <div className="flex flex-col my-12">
+        <div className="flex flex-col items-center my-12">
             <div className="mx-auto flex-col justify-start items-center gap-1 inline-flex my-2">
                 <div className="text-zinc-700 text-[20px] font-bold leading-loose">Contact Me</div>
-                <div className="w-60 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
+                <div className="px-10 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
             </div>
-            <div className="left-[40px]  flex-col justify-start items-center gap-4 inline-flex my-2">
-                {isFormSubmitting === 'success' && (
-                    <div>Form submitted successfully!</div>
-                )}
-
-                <form onSubmit={handleSubmit}>
-                    <div className="my-2">
+            <div className="flex flex-col justify-start items-center gap-4 my-2 w-full">
+                <form onSubmit={handleSubmit} className="w-full px-6 flex flex-col items-center">
+                    <div className="my-2 w-full">
                         <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Full Name</div>
-                        <input className="my-2 w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Full name" name="name" required />
+                        <input className="my-2 w-full px-3 py-2 bg-white rounded border border-slate-100 gap-2.5 text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Full name" name="name" required />
                     </div>
-                    <div className="my-2">
+                    <div className="my-2 w-full">
                         <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Email</div>
-                        <input className="my-2 w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Email" type="email" name="email" required />
+                        <input className="my-2 w-full px-3 py-2 bg-white rounded border border-slate-100 gap-2.5 text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Email" type="email" name="email" required />
                     </div>
-                    <div className="my-2">
+                    <div className="my-2 w-full">
                         <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Subject</div>
-                        <input className="my-2 w-60 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-center gap-2.5 inline-flextext-center text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Subject" name="subject" required />
+                        <input className="my-2 w-full px-3 py-2 bg-white rounded border border-slate-100 gap-2.5 text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Subject" name="subject" required />
                     </div>
-                    <div className="my-2">
+                    <div className="my-2 w-full">
                         <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Message</div>
-                        <textarea className="my-2 w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message" name="message"
+                        <textarea className="my-2 w-full h-20 px-3 py-2 bg-white rounded border border-slate-100 gap-2.5 text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message" name="message"
                             rows="5" cols="33" required>
                         </textarea>
                     </div>
-                    <div className="mx-auto px-10">
-
-                        {isFormSubmitting ? (<PrimaryButton content={<div className="flex items-center justify-center animate-pulse">
+                    <div>
+                        {isFormSubmitting ? (<PrimaryButton content={
+                        <div className="flex items-center justify-center animate-pulse">
                             <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
                             <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
                             <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
                         </div>} />) : (<button type="submit"><PrimaryButton content="Send Message" /></button>)}
-
                         {showSnackbar && (<SnackBar />)}
                     </div>
                 </form>
