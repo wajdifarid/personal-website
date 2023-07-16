@@ -10,28 +10,34 @@ import ContactForm from "./components/ContactForm";
 
 export default function HomePage() {
   return (
-    <div className="bg-white">
+    <div className="bg-white flex flex-col items-center">
       <NavBar />
-      <DesktopNotificationWIP/>
-      <section className="flex flex-col my-8">
-        <img className="mx-auto h-36 rounded-full lg:h-72" src="/assets/profile-picture.jpg" alt="Farid Wajdi" />
-        <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Hi, I’m Farid Wajdi</div>
-        <div className="mx-auto text-zinc-700 text-[14px] font-normal leading-normal">Full-Stack Software Engineer</div>
-        <div className="mx-auto my-2 w-60 left-[40px] text-center text-slate-400 text-[14px] font-normal leading-normal">I like to solve problem and build product which leaves an impact on people lives. Based in Jakarta 🇮🇩</div>
-        <div className="flex mx-auto my-2">
-          <div className="mx-2">
-            <a href="#portfolio">
-              <SecondaryButton content="See Portfolio" />
-            </a>
-          </div>
-          <div className="mx-2">
-            <a href="#contact">
-              <PrimaryButton content="Contact Me" />
-            </a>
+      <DesktopNotificationWIP />
+      <section>
+        <div className="flex flex-col mx-auto my-8 items-center lg:flex-row">
+          <img className="h-36 w-36 rounded-full lg:h-72 lg:w-72 inline" src="/assets/profile-picture.jpg" alt="Farid Wajdi" />
+          <div className="mx-auto flex-col items-center inline-flex">
+            <h2 className="text-zinc-700 text-[20px] font-bold leading-loose">Hi, I’m Farid Wajdi</h2>
+            <h3 className="text-zinc-700 text-[14px] font-normal leading-normal">Full-Stack Software Engineer</h3>
+            <p className="my-2 w-60 text-center text-slate-400 text-[14px] font-normal leading-normal">
+              I like to solve problem and build product which leaves an impact on people lives. Based in Jakarta 🇮🇩
+            </p>
+            <div className="flex my-2">
+              <div className="mx-2">
+                <a href="#portfolio">
+                  <SecondaryButton content="See Portfolio" />
+                </a>
+              </div>
+              <div className="mx-2">
+                <a href="#contact">
+                  <PrimaryButton content="Contact Me" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section id="experiences" className="flex flex-col my-12">
+      <section id="experiences" className="flex flex-col my-12 w-full">
         <div className="mx-auto font-bold text-zinc-700 text-[1.25rem] leading-loose">Experiences</div>
         <div className="mx-auto w-full h-full">
           <div className="relative">
@@ -152,9 +158,9 @@ export default function HomePage() {
       </section>
 
       <section id="contact">
-        <ContactForm/>
+        <ContactForm />
       </section>
-      <section className="mt-10">
+      <section className="mt-10 w-full">
         <Footer />
       </section>
     </div>);

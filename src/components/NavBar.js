@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function NavBar() {
   return (
-    <nav className="py-4 bg-white border border-slate-100 flex justify-between px-2 sticky top-0 z-50">
+    <nav className="py-4 bg-white border border-slate-100 flex justify-between px-2 sticky top-0 z-50 w-full">
       <div className="text-left text-sky-500 text-[20px] font-black leading-loose inline">
         FW
       </div>

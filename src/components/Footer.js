@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div className="flex flex-col px-4 py-8 bg-slate-100 items-center gap-5">
-      <div className="flex w-64 gap-6 items-center justify-center">
+      <div className="flex gap-6 items-center justify-center">
         <a className="text-slate-500 text-[0.875rem] font-medium" href="mailto:faridwajdi05@gmail.com" target="_blank" rel="noreferrer">
           Email
         </a>
