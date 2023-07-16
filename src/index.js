@@ -1,12 +1,10 @@
 import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import TagManager from 'react-gtm-module';
 import "./index.css";
-
 import App from "./App";
+import ReactGA from "react-ga4";
 
-const gtmId = process.env.REACT_APP_GTM_ID;
-TagManager.initialize({ gtmId });
+ReactGA.initialize(process.env.REACT_APP_GA_ID);
 
 const root = createRoot(document.getElementById("root"));
 root.render(
