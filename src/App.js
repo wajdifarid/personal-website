@@ -14,7 +14,7 @@ export default function HomePage() {
       <NavBar />
       <DesktopNotificationWIP />
       <section>
-        <div className="flex flex-col mx-auto my-8 items-center lg:flex-row">
+        <div className="flex flex-col mx-auto items-center lg:flex-row">
           <img className="h-36 w-36 rounded-full lg:h-72 lg:w-72 inline" src="/assets/profile-picture.jpg" alt="Farid Wajdi" />
           <div className="mx-auto flex-col items-center inline-flex">
             <h2 className="text-zinc-700 text-[20px] font-bold leading-loose">Hi, I’m Farid Wajdi</h2>
@@ -37,7 +37,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section id="experiences" className="flex flex-col my-12 w-full">
+      <section id="experiences" className="flex flex-col w-full">
         <div className="mx-auto font-bold text-zinc-700 text-[1.25rem] leading-loose">Experiences</div>
         <div className="mx-auto w-full h-full">
           <div className="relative">
@@ -118,7 +118,7 @@ export default function HomePage() {
 
       </section>
 
-      <section id="skills" className="flex flex-col my-12">
+      <section id="skills" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Skills</div>
         <div className="mx-auto flex flex-col lg:flex-row">
           <div className="m-2">
@@ -133,7 +133,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="portfolio" className="flex flex-col my-12">
+      <section id="portfolio" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Portfolio</div>
         <div className="flex-col justify-start items-center gap-4 inline-flex">
           <a href="https://github.com/wajdifarid/pick-up-turn" target="_blank" rel="noreferrer">
@@ -145,7 +145,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="blogs" className="flex flex-col my-12">
+      <section id="blogs" className="flex flex-col">
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Blog</div>
         <div className="left-[20px]  flex-col justify-start items-center gap-4 inline-flex">
           <a href="https://wajdifarid.substack.com/p/coming-soon" target="_blank" rel="noreferrer">
