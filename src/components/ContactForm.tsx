@@ -1,16 +1,17 @@
 import { useState } from "react";
 import SnackBar from "./SnackBar";
 import { PrimaryButton } from './Button'
+import React from "react";
 
 
 export default function ContactForm() {
     const [isFormSubmitting, setIsFormSubmitting] = useState(false);
     const [showSnackbar, setShowSnackbar] = useState(false);
 
-    function handleSubmit(e) {
+    function handleSubmit(e: any) {
         setIsFormSubmitting(true)
         e.preventDefault();
-        const formData = new URLSearchParams(new FormData(e.target));
+        const formData = new URLSearchParams(new FormData(e.target) as any);
 
         fetch("https://script.google.com/macros/s/AKfycbw8L2GYlMhT2Pz4dPupnjiAkof7W_jVcDqbw7AHCKbXtOLkz27P5d4WMnxSznTJS6U/exec", {
             "headers": {
@@ -27,7 +28,7 @@ export default function ContactForm() {
             }, 3000)
         }).then(() => e.target.reset());
     }
-    
+
     return (
         <div className="flex flex-col items-center my-12">
             <div className="mx-auto flex-col justify-start items-center gap-1 inline-flex my-2">
@@ -51,17 +52,17 @@ export default function ContactForm() {
                     <div className="my-2 w-full">
                         <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Message</div>
                         <textarea className="my-2 w-full h-20 px-3 py-2 bg-white rounded border border-slate-100 gap-2.5 text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message" name="message"
-                            rows="5" cols="33" required>
+                            rows={5} cols={33} required>
                         </textarea>
                     </div>
                     <div>
-                        {isFormSubmitting ? (<PrimaryButton content={
-                        <div className="flex items-center justify-center animate-pulse">
-                            <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
-                            <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
-                            <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
-                        </div>} />) : (<button type="submit"><PrimaryButton content="Send Message" /></button>)}
-                        {showSnackbar && (<SnackBar />)}
+                        {isFormSubmitting ? (<PrimaryButton children={
+                            <div className="flex items-center justify-center animate-pulse">
+                                <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
+                                <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
+                                <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
+                            </div>} />) : (<button type="submit"><PrimaryButton children="Send Message" /></button>)}
+                        {showSnackbar && (<SnackBar children={undefined} />)}
                     </div>
                 </form>
             </div>

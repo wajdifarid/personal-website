@@ -7,6 +7,7 @@ import BlogCard from './components/BlogCard'
 import PortfolioCard from "./components/PortfolioCard"
 import DesktopNotificationWIP from "./components/DesktopNotificationWIP";
 import ContactForm from "./components/ContactForm";
+import React from 'react'
 
 export default function HomePage() {
   return (
@@ -25,12 +26,12 @@ export default function HomePage() {
             <div className="flex my-2">
               <div className="mx-2">
                 <a href="#portfolio">
-                  <SecondaryButton content="See Portfolio" />
+                  <SecondaryButton children="See Portfolio" />
                 </a>
               </div>
               <div className="mx-2">
                 <a href="#contact">
-                  <PrimaryButton content="Contact Me" />
+                  <PrimaryButton children="Contact Me" />
                 </a>
               </div>
             </div>
@@ -140,7 +141,7 @@ export default function HomePage() {
             <PortfolioCard imgSrc="/assets/pickup-turn.jpg" title="Pickup Turn" details="Displays the order in which individuals from a group take their turns. It had 3 active users for several months" />
           </a>
           <a href="https://github.com/wajdifarid" target="_blank" rel="noreferrer">
-            <SecondaryButton content="See Github" />
+            <SecondaryButton children="See Github" />
           </a>
         </div>
       </section>
@@ -152,7 +153,7 @@ export default function HomePage() {
             <BlogCard title="Coming Soon" publishDate="26 June 2023" />
           </a>
           <a href="https://wajdifarid.substack.com/" target="_blank" rel="noreferrer">
-            <SecondaryButton content="Visit Blog" />
+            <SecondaryButton children="Visit Blog" />
           </a>
         </div>
       </section>
@@ -163,5 +164,5 @@ export default function HomePage() {
       <section className="mt-10 w-full">
         <Footer />
       </section>
-    </div>);
+    </div >);
 }

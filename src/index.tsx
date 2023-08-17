@@ -6,7 +6,7 @@ import ReactGA from "react-ga4";
 
 ReactGA.initialize(process.env.REACT_APP_GA_ID);
 
-const root = createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root")!);
 root.render(
   <StrictMode>
     <App />

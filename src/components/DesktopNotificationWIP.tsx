@@ -1,15 +1,16 @@
+import React from "react";
 import { useState } from "react";
 
 export default function DesktopNotificationWIP() {
     const [isShown, setShown] = useState(true);
 
     function handleClick() {
-        if (isShown){
+        if (isShown) {
             setShown(false);
         }
     }
 
-    return ( isShown?
+    return (isShown ?
         <div className="hidden lg:flex my-2">
             <div className="mx-auto h-20 p-4 bg-sky-100 rounded justify-start items-center gap-2 inline-flex">
                 <div className="grow shrink basis-0 flex-col justify-center items-start gap-1 inline-flex">
@@ -17,8 +18,8 @@ export default function DesktopNotificationWIP() {
                         👋 Hey there! My site is still a work in progress, but your feedback is super valuable! For best experience please use mobile view. Thanks for your understanding and patience.
                     </div>
                 </div>
-                <img className="w-4 h-4 hover:cursor-pointer" src="/assets/close-icon.svg" alt="close-icon" onClick={handleClick}/>
+                <img className="w-4 h-4 hover:cursor-pointer" src="/assets/close-icon.svg" alt="close-icon" onClick={handleClick} />
             </div>
-        </div>:<></>
+        </div> : <></>
     );
 }
