@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 export default function NavBar() {
@@ -18,7 +19,7 @@ export function HamburgerMenu() {
 
   return (
     <>
-    <div>
+      <div>
         <div className={"fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-80 z-20 " + (isOpen ? "" : "hidden")} onClick={toggleMenu}>
         </div>
         <div className={"fixed shadow-2xl top-0 right-0 w-4/6 h-screen bg-white z-20 transition-transform duration-500 transform " + (isOpen ? "translate-x-0" : "translate-x-full")}>
@@ -38,7 +39,7 @@ export function HamburgerMenu() {
       <div className="p-2 " onClick={toggleMenu}>
         <img src="/assets/hamburger-menu-icon.svg" alt="hamburger menu" />
       </div>
-      
+
 
     </>
   );
