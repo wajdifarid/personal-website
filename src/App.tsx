@@ -13,10 +13,10 @@ export default function HomePage() {
   const [isFormSubmitting, setIsFormSubmitting] = useState(false);
   const [showSnackbar, setShowSnackbar] = useState(false);
 
-  function handleSubmit(e) {
-    setIsFormSubmitting(true)
+  function handleSubmit(e: any): void {
+    setIsFormSubmitting(true);
     e.preventDefault();
-    const formData = new URLSearchParams(new FormData(e.target));
+    const formData = new URLSearchParams(new FormData(e.target as any) as any);
 
     fetch("https://script.google.com/macros/s/AKfycbw8L2GYlMhT2Pz4dPupnjiAkof7W_jVcDqbw7AHCKbXtOLkz27P5d4WMnxSznTJS6U/exec", {
       "headers": {
@@ -37,7 +37,7 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       <NavBar />
-      <DesktopNotificationWIP/>
+      <DesktopNotificationWIP />
       <section className="flex flex-col my-8">
         <img className="mx-auto h-36 rounded-full sm:h-72" src="/assets/profile-picture.jpg" alt="Farid Wajdi" />
         <div className="mx-auto text-zinc-700 text-[20px] font-bold leading-loose">Hi, I’m Farid Wajdi</div>
@@ -46,12 +46,12 @@ export default function HomePage() {
         <div className="flex mx-auto my-2">
           <div className="mx-2">
             <a href="#portfolio">
-              <SecondaryButton content="See Portfolio" />
+              <SecondaryButton children="See Portfolio" />
             </a>
           </div>
           <div className="mx-2">
             <a href="#contact">
-              <PrimaryButton content="Contact Me" />
+              <PrimaryButton children="Contact Me" />
             </a>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function HomePage() {
             <PortfolioCard imgSrc="/assets/pickup-turn.jpg" title="Pickup Turn" details="Displays the order in which individuals from a group take their turns. It had 3 active users for several months" />
           </a>
           <a href="https://github.com/wajdifarid" target="_blank" rel="noreferrer">
-            <SecondaryButton content="See Github" />
+            <SecondaryButton children="See Github" />
           </a>
         </div>
       </section>
@@ -171,7 +171,7 @@ export default function HomePage() {
             <BlogCard title="Coming Soon" publishDate="26 June 2023" />
           </a>
           <a href="https://wajdifarid.substack.com/" target="_blank" rel="noreferrer">
-            <SecondaryButton content="Visit Blog" />
+            <SecondaryButton children="Visit Blog" />
           </a>
         </div>
       </section>
@@ -182,7 +182,7 @@ export default function HomePage() {
           <div className="w-60 text-center text-zinc-700 text-[14px] font-normal leading-normal">I’m available for consultations, collaborations, and coffee! ☕</div>
         </div>
         <div className="left-[40px]  flex-col justify-start items-center gap-4 inline-flex my-2">
-          {isFormSubmitting === 'success' && (
+          {isFormSubmitting && (
             <div>Form submitted successfully!</div>
           )}
 
@@ -201,25 +201,22 @@ export default function HomePage() {
             </div>
             <div className="my-2">
               <div className="text-left text-zinc-700 text-[14px] font-normal leading-normal">Message</div>
-              <textarea className="my-2 w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message" name="message"
-                rows="5" cols="33" required>
+              <textarea className="my-2 w-60 h-20 px-3 py-2 bg-white rounded border border-slate-100 justify-start items-start gap-2.5 inline-flex text-left text-[14px] font-normal leading-normal focus:outline-sky-500" placeholder="Message" name="message" rows={5} cols={33} required >
               </textarea>
             </div>
             <div className="mx-auto px-10">
-
-              {isFormSubmitting ? (<PrimaryButton content={<div className="flex items-center justify-center animate-pulse">
+              {isFormSubmitting ? (<PrimaryButton children={<div className="flex items-center justify-center animate-pulse">
                 <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
                 <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
                 <div className="w-3 h-3 m-1 bg-slate-100 opacity-25 rounded-full"></div>
-              </div>} />) : (<button type="submit"><PrimaryButton content="Send Message" /></button>)}
-
-              {showSnackbar && (<SnackBar />)}
+              </div>} />) : (<button type="submit"><PrimaryButton children="Send Message" /></button>)}
+              {showSnackbar && (<SnackBar children={undefined} />)}
             </div>
           </form>
         </div>
-      </section>
+      </section >
       <section className="mt-10">
         <Footer />
       </section>
-    </div>);
+    </div >);
 }
